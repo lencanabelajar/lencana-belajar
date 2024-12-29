@@ -71,15 +71,15 @@ async function updateUserProgress(userId, xpEarned, tokensEarned) {
     tokens: tokensEarned,
   };
 
-  const response = await fetch('/api/updateProgress', {
-    method: 'POST',
+  const response = await fetch('/api/users', {
+    method: 'POST', // Jenis request
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json', // Data dalam format JSON
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(payload), // Kirim data ke server
   });
 
-  const result = await response.json();
+  const result = await response.json(); // Respons dari server
   if (response.ok) {
     alert(`XP dan token berhasil diperbarui!\nXP: ${result.user.xp}, Tokens: ${result.user.tokens}`);
   } else {

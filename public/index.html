@@ -1,10 +1,11 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lencana Belajar</title>
-  <link rel="stylesheet" href="css/style.css"> <!-- Link ke file CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -18,49 +19,40 @@
       <p>Pilih salah satu opsi di bawah ini:</p>
 
       <!-- Login Form -->
-      <div id="login-form" class="form-container">
-        <h3>Login</h3>
-        <div class="form-group">
-          <label for="login-email">Email</label>
-          <input type="email" id="login-email" placeholder="Masukkan email">
-        </div>
-        <div class="form-group">
-          <label for="login-password">Password</label>
-          <input type="password" id="login-password" placeholder="Masukkan password">
-        </div>
-        <button id="login-btn">Login</button>
+      <div class="form-group">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" placeholder="Masukkan email">
       </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" placeholder="Masukkan password">
+      </div>
+      <button id="login-btn">Login</button>
 
       <hr>
 
       <!-- Registration Form -->
-      <div id="register-form" class="form-container">
-        <h3>Belum Punya Akun? Registrasi</h3>
-        <div class="form-group">
-          <label for="register-email">Email</label>
-          <input type="email" id="register-email" placeholder="Masukkan email">
-        </div>
-        <div class="form-group">
-          <label for="register-password">Password</label>
-          <input type="password" id="register-password" placeholder="Masukkan password">
-        </div>
-        <button id="register-btn">Daftar</button>
+      <h3>Belum Punya Akun? Registrasi</h3>
+      <div class="form-group">
+        <label for="register-email">Email</label>
+        <input type="email" id="register-email" placeholder="Masukkan email">
       </div>
+      <div class="form-group">
+        <label for="register-password">Password</label>
+        <input type="password" id="register-password" placeholder="Masukkan password">
+      </div>
+      <button id="register-btn">Daftar</button>
 
       <hr>
 
-      <!-- Leaderboard -->
-      <h3>Leaderboard</h3>
-      <ul id="leaderboard"></ul>
-      <button onclick="updateUserProgress(1, 50, 20)">Tambah XP & Token</button>
-
-      <hr>
-
-      <!-- Logout Button -->
+      <!-- Logout -->
       <button id="logout-btn" style="display: none;">Logout</button>
     </div>
   </main>
-  
+
+  <h3>Leaderboard</h3>
+  <ul id="leaderboard"></ul>
+
   <footer>
     <p>© 2024 Lencana Belajar. Semua hak dilindungi.</p>
   </footer>

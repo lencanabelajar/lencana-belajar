@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "email": "user1@example.com",
+    "xp": 100,
+    "tokens": 50,
+    "badges": ["badge_1"]
+  },
+  {
+    "id": 2,
+    "email": "user2@example.com",
+    "xp": 200,
+    "tokens": 100,
+    "badges": ["badge_2"]
+  }
+]

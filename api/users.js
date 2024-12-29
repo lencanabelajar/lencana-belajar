@@ -2,7 +2,7 @@ export default function handler(req, res) {
   const fs = require('fs');
   const path = require('path');
 
-  const filePath = path.join(process.cwd(), 'api', 'users.json');
+  const filePath = path.join(process.cwd(), 'api', 'usersData.json'); // Perbarui path ke usersData.json
   const usersData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
   if (req.method === 'GET') {

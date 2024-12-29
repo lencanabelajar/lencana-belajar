@@ -56,3 +56,29 @@ document.getElementById('logout-btn').addEventListener('click', () => {
       alert("Error: " + error.message);
     });
 });
+
+async function updateUserProgress(userId, xpEarned, tokensEarned) {
+  const payload = {
+    id: userId,
+    xp: xpEarned,
+    tokens: tokensEarned,
+  };
+
+  const response = await fetch('/api/users', {
+    method: 'POST', // Jenis request
+    headers: {
+      'Content-Type': 'application/json', // Data dalam format JSON
+    },
+    body: JSON.stringify(payload), // Kirim data ke server
+  });
+
+  const result = await response.json(); // Respons dari server
+  if (response.ok) {
+    alert(`XP dan token berhasil diperbarui!\nXP: ${result.user.xp}, Tokens: ${result.user.tokens}`);
+  } else {
+    alert(`Gagal memperbarui data: ${result.message}`);
+  }
+}
+
+// Contoh penggunaan: Update user dengan ID 1, tambah 50 XP dan 20 token
+updateUserProgress(1, 50, 20);

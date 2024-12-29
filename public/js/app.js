@@ -87,5 +87,17 @@ async function updateUserProgress(userId, xpEarned, tokensEarned) {
   }
 }
 
+function displayTasks() {
+  const tasksList = document.getElementById('tasks-list');
+  tasksList.innerHTML = '';
+  tasks.forEach(task => {
+    const li = document.createElement('li');
+    li.textContent = task.name;
+    tasksList.appendChild(li);
+  });
+}
+
+displayTasks();
+
 // Contoh penggunaan: Update user dengan ID 1, tambah 50 XP dan 20 token
 updateUserProgress(1, 50, 20);
